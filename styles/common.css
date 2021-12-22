@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica';
+}
+
+:root {
+  --color-amber: #ffc107;
+  --color-cyan: #00BCD4;
+  --color-deep-orange: #dd2c00;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #eee;
+}

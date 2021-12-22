@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Блоки</title>
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet"
+        href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/atom-one-dark.min.css">
+</head>
+<body>
+  <div class="page">
+    <section class="section">
+      <h2 class="section__header">Button</h2>
+      <p class="section__description">Простой блок. У блока присутствуют модификаторы <strong>color, size</strong>, влияющие на его цвет, размер</p>
+      <div class="blocks">
+        <div class="blocks__row">
+          <button class="button button_color_primary button_size_large">Primary Button</button>
+          <button class="button button_color_default button_size_medium">Default Button</button>
+          <button class="button button_color_dashed button_size_small">Dashed Button</button>
+        </div>
+        <button class="accordion">HTML</button>
+        <div class="panel">
+          <pre>
+          <code class="language-html">
+            &lt;button class="button button_color_primary button_size_large"&gt;Primary Button&lt;/button&gt;
+            &lt;button class="button button_color_default button_size_medium"&gt;Default Button&lt;/button&gt;
+            &lt;button class="button button_color_dashed button_size_small"&gt;Dashed Button&lt;/button&gt;
+          </code>
+          </pre>
+        </div>
+        <button class="accordion">CSS</button>
+        <div class="panel">
+          <pre>
+          <code class="language-css">
+            .button {
+              text-align: center;
+              border: 1px solid transparent;
+              padding: 4px 16px;
+              font-size: 14px;
+              border-radius: 2px;
+              cursor: pointer;
+              transition: all .3s cubic-bezier(.645,.045,.355,1);
+              height: 32px;
+            }
+
+            .button_color_primary {
+              color: #fff;
+              background: #1890ff;
+            }
+
+            .button_color_primary:hover {
+              background: #40a9ff;
+              border-color: #40a9ff;
+            }
+
+            .button_color_default {
+              background: #fff;
+              color: #000000d9;
+              border-color: #d9d9d9;
+              box-shadow: 0 2px #00000004;
+            }
+
+            .button_color_default:hover {
+              color: #40a9ff;
+              border-color: #40a9ff;
+            }
+
+            .button_color_dashed {
+              background: #fff;
+              color: #000000d9;
+              border-color: #d9d9d9;
+              border-style: dashed;
+              box-shadow: 0 2px #00000004;
+            }
+
+            .button_color_dashed:hover {
+              color: #40a9ff;
+              border-color: #40a9ff;
+            }
+
+            .button_size_small {
+              height: 24px;
+            }
+
+            .button_size_medium {
+              height: 32px;
+            }
+
+            .button_size_large {
+              height: 40px;
+            }
+          </code>
+          </pre>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section__header">Input</h2>
+      <p class="section__description">Простой блок.</p>
+      <div class="blocks">
+        <div class="blocks__row">
+          <input class="input" placeholder="Введите" type="text" value="" />
+        </div>
+        <button class="accordion">HTML</button>
+        <div class="panel">
+          <pre>
+          <code class="language-html">
+            &lt;input class="input" placeholder="Введите" type="text" value="" /&gt;
+          </code>
+          </pre>
+        </div>
+        <button class="accordion">CSS</button>
+        <div class="panel">
+          <pre>
+          <code class="language-css">
+            .input {
+              box-sizing: border-box;
+              margin: 0;
+              position: relative;
+              padding: 4px 11px;
+              color: #000000d9;
+              font-size: 14px;
+              line-height: 1.5715;
+              background-color: #fff;
+              border: 1px solid #d9d9d9;
+              border-radius: 2px;
+              transition: all .3s;
+            }
+
+            .input:hover {
+              border-color: #40a9ff;
+            }
+
+            .input:focus {
+              border-color: #40a9ff;
+              box-shadow: 0 0 0 2px rgba(24, 144, 255, .2);
+              border-right-width: 1px;
+              outline: 0;
+            }
+          </code>
+          </pre>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section__header">Input group</h2>
+      <p class="section__description">
+      Блок <strong>input-group</strong>, который объединяет в себе несколько инпутов и управляет их стилями.
+      </p>
+      <div class="blocks">
+        <div class="blocks__row">
+          <div class="input-group">
+            <input class="input input-group__input" placeholder="От" type="text" value="" /><input class="input  input-group__input" placeholder="До" type="text" value="" />
+          </div>
+        </div>
+        <div class="blocks__row">
+          <div class="input-group">
+            <input class="input input-group__input" placeholder="Первый" type="text" value="" /><input class="input  input-group__input" placeholder="Второй" type="text" value="" /><input class="input  input-group__input" placeholder="Третий" type="text" value="" />
+          </div>
+        </div>
+        <button class="accordion">HTML</button>
+        <div class="panel">
+          <pre>
+          <code class="language-html">
+            &lt;div class="input-group"&gt;
+              &lt;input class="input input-group__input" placeholder="От" type="text" value="" /&gt;&lt;input class="input  input-group__input" placeholder="До" type="text" value="" /&gt;
+            &lt;/div&gt;
+
+            &lt;div class="input-group"&gt;
+              &lt;input class="input input-group__input" placeholder="Первый" type="text" value="" /&gt;&lt;input class="input  input-group__input" placeholder="Второй" type="text" value="" /&gt;&lt;input class="input  input-group__input" placeholder="Третий" type="text" value="" /&gt;
+            &lt;/div&gt;
+          </code>
+          </pre>
+        </div>
+        <button class="accordion">CSS</button>
+        <div class="panel">
+          <pre>
+          <code class="language-css">
+            .input-group__input {
+              width: 75px;
+            }
+
+            .input-group__input:not(:first-child):not(:last-child) {
+              border-radius: 0;
+            }
+
+            .input-group__input:hover {
+              z-index: 1;
+            }
+
+            .input-group__input:not(:last-child) {
+              margin-right: -1px;
+              border-right-width: 1px;
+              width: 75px;
+            }
+
+            .input-group__input:first-child {
+              border-top-right-radius: 0;
+              border-bottom-right-radius: 0;
+            }
+
+            .input-group__input:last-child {
+              border-top-left-radius: 0;
+              border-bottom-left-radius: 0;
+            }
+          </code>
+          </pre>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section__header">Searchbar</h2>
+      <p class="section__description">
+      Мы объединили два блока - input и button, поработали над стилями и получили блок для поиска. Блоки <strong>input, button</strong> не знают о том как располагаться друг относительно друга, поэтому за это отвечает блок <strong>searchbar</strong> у которого есть элементы <strong>searchbar__input, searchbar__button</strong>
+      </p>
+      <div class="blocks">
+        <div class="blocks__row">
+          <div class="searchbar">
+            <input class="input  searchbar__input" placeholder="Поиск" type="text" value="" />
+            <button class="button button_color_primary searchbar__button">Поиск</button>
+          </div>
+        </div>
+        <button class="accordion">HTML</button>
+        <div class="panel">
+          <pre>
+          <code class="language-html">
+            &lt;div class="searchbar"&gt;
+              &lt;input class="input  searchbar__input" placeholder="Поиск" type="text" value="" /&gt;
+              &lt;button class="button button_color_primary searchbar__button"&gt;Поиск&lt;/button&gt;
+            &lt;/div&gt;
+          </code>
+          </pre>
+        </div>
+        <button class="accordion">CSS</button>
+        <div class="panel">
+          <pre>
+          <code class="language-css">
+            .searchbar {
+              display: flex;
+              width: 250px;
+            }
+
+            .searchbar__button {
+              border-top-left-radius: 0;
+              border-bottom-left-radius: 0;
+            }
+
+            .searchbar__button:hover {
+              z-index: 1;
+            }
+
+            .searchbar__input {
+              border-top-right-radius: 0;
+              border-bottom-right-radius: 0;
+              border-right: 0;
+            }
+          </code>
+          </pre>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section__header">Form</h2>
+      <p class="section__description">
+      Объединив пару инпутов и кнопок получаем блок формы. Обратите внимание как мы указываем расположение блока относительно других блоков. Так как напрямую блоку задавать отступы нельзя по БЭМ, отступы задает родитель, использующий этот блок. В данном примере у нас есть блок <strong>sign-in-form</strong> и у него есть два инпута и кнопка, которые являются элементами данного блока. И именно элементам мы задаем внешнюю геометрию. Таким образом блоки <strong>input</strong>, <strong>button</strong> остаются независимыми а за их расположение друг относительно друга отвечает блок, который использует их (<strong>sign-in-form</strong>).</p>
+      <div class="blocks">
+        <div class="blocks__row">
+          <form class="sign-in-form">
+            <legend class="sign-in-form__legend">Добро пожаловать!</legend>
+            <div class="sign-in-form__body">
+              <input class="input sign-in-form__input" placeholder="Логин" type="text" value="" />
+              <input class="input sign-in-form__input" placeholder="Пароль" type="password" value="" />
+            </div>
+            <button class="button button_color_primary sign-in-form__button">Войти</button>
+          </form>
+        </div>
+        <button class="accordion">HTML</button>
+        <div class="panel">
+          <pre>
+          <code class="language-html">
+            &lt;form class="sign-in-form"&gt;
+              &lt;legend class="sign-in-form__legend"&gt;Добро пожаловать!&lt;/legend&gt;
+              &lt;div class="sign-in-form__body"&gt;
+                &lt;input class="input sign-in-form__input" placeholder="Логин" type="text" value="" /&gt;
+                &lt;input class="input sign-in-form__input" placeholder="Пароль" type="password" value="" /&gt;
+              &lt;/div&gt;
+              &lt;button class="button button_color_primary sign-in-form__button"&gt;Войти&lt;/button&gt;
+            &lt;/form&gt;
+          </code>
+          </pre>
+        </div>
+        <button class="accordion">CSS</button>
+        <div class="panel">
+          <pre>
+          <code class="language-css">
+            .sign-in-form {
+              border: 1px solid #eee;
+              width: 250px;
+              padding: 10px;
+              border-radius: 8px;
+            }
+
+            .sign-in-form__legend {
+              text-align: center;
+              margin-bottom: 16px;
+              font-weight: bold;
+            }
+
+            .sign-in-form__input {
+              width: 100%;
+              margin-bottom: 8px;
+            }
+
+            .sign-in-form__input:last-child {
+              margin: 0;
+            }
+
+            .sign-in-form__body {
+              margin-bottom: 32px;
+            }
+
+            .sign-in-form__button {
+              width: 100%;
+            }
+          </code>
+          </pre>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="main.js"></script>
+</body>
+</html>

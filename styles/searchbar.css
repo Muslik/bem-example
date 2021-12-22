@@ -1,0 +1,19 @@
+.searchbar {
+  display: flex;
+  width: 250px;
+}
+
+.searchbar__button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.searchbar__button:hover {
+  z-index: 1;
+}
+
+.searchbar__input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: 0;
+}
